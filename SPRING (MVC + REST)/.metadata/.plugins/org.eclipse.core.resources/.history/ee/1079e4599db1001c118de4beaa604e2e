@@ -1,0 +1,12 @@
+package com.nttdata.SpringMVC.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@ControllerCliente
+@RequestMapping("/*")
+public class ControllerCliente {
+	
+	
+	
+}

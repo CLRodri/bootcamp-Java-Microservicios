@@ -1,0 +1,29 @@
+package com.nttdata.SpringMVC.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nttdata.SpringMVC.nuevo.service.ClienteService;
+
+@Controller
+@RequestMapping("/*")
+public class ControllerClienteImpl implements ClienteService{
+	
+
+	@Autowired
+	private ClienteService clienteService;
+	
+
+	@RequestMapping("/mostrarCliente", method = RequestMethod.GET)
+	public void mostrarClientes() {
+		clienteService.mostrarTodos();
+	}
+	
+	@RequestMapping("nuevo-cliente")
+	public void addClient() {
+		
+	}
+	
+}

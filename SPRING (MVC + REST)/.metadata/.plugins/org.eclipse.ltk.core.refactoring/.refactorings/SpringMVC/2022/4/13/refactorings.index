@@ -1,0 +1,13 @@
+1648803715030	Rename package 'com.nttdata.desafio3.nuevo'
+1648803730042	Rename package 'com.nttdata.desafio3.nuevo.entity'
+1648803747515	Rename package 'com.nttdata.desafio3.nuevo.repository'
+1648803759928	Rename package 'com.nttdata.desafio3.nuevo.service'
+1648803773676	Rename package 'com.nttdata.desafio3.nuevo.service.impl'
+1648804930055	Rename type 'Controller'
+1648804991929	Rename type 'ControllerCliente'
+1648805781450	Delete element
+1648808094025	Rename package 'com.nttdata.SpringMVC.controller'
+1648808110346	Rename package 'com.nttdata.SpringMVC'
+1648808207321	Delete element
+1648808831563	Delete element
+1648810796684	Rename package 'com.nttdata.SpringMVC.nuevo.nuevo'

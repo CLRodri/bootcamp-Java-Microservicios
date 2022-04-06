@@ -1,0 +1,5 @@
+package com.nttdata.SpringMVC.controller;
+
+public class Controller {
+
+}

@@ -1,0 +1,8 @@
+package com.nttdata.SpringMVC.controller;
+
+public interface ControllerCliente {
+
+	void mostrarClientes();
+	
+	
+}
