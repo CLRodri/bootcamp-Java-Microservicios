@@ -1,0 +1,5 @@
+package com.nttdata.carritocompra.model;
+
+public class Articulo {
+
+}

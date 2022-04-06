@@ -1,0 +1,47 @@
+package com.nttdata.carritocompra.service;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+
+import com.nttdata.carritocompra.model.Articulo;
+
+class CarritoCompraServiceImplTest {
+	
+	private CarritoCompraServiceImpl cesta = new CarritoCompraServiceImpl();
+	@Test
+	void testLimpiarCesta() {
+		Articulo art = new Articulo("platanos",10);
+		cesta.addArticulo(art);
+		assertFalse(cesta.getArticulos().isEmpty());
+		cesta.limpiarCesta();
+		
+	}
+
+	@Test
+	void testAddArticulo() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetNumArticulos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetArticulos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testTotalPrice() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculadorDescuento() {
+		fail("Not yet implemented");
+	}
+
+}

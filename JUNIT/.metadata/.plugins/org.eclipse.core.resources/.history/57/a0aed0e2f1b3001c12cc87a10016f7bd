@@ -1,0 +1,72 @@
+package com.nttdata.carritocompra.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import com.nttdata.carritocompra.model.Articulo;
+
+
+@RunWith(MockitoJUnitRunner.class)
+class CarritoCompraServiceImplTest {
+	
+	private CarritoCompraServiceImpl cesta = new CarritoCompraServiceImpl();
+	@Test
+	void testLimpiarCesta() {
+		Articulo art = new Articulo("platanos",10);
+		cesta.addArticulo(art);
+		cesta.limpiarCesta();
+		assertTrue(cesta.getArticulos().isEmpty());
+	}
+
+	@Test
+	void testAddArticulo(){
+		Articulo art = new Articulo("platanos",10);
+		cesta.addArticulo(art);
+		assertFalse(cesta.getArticulos().isEmpty());
+	}
+
+	@Test
+	void testGetNumArticulos() {
+		Articulo art = new Articulo("platanos",10);
+		Articulo art2 = new Articulo("zapatillas",300);
+		Articulo art3 = new Articulo("camisetas",30);
+		cesta.addArticulo(art);
+		cesta.addArticulo(art2);
+		cesta.addArticulo(art3);
+		assertEquals(3,cesta.getNumArticulos(),0);
+	}
+
+	@Test
+	void testGetArticulos() {
+		Articulo art = new Articulo("platanos",10);
+		Articulo art2 = new Articulo("zapatillas",300);
+		Articulo art3 = new Articulo("camisetas",30);
+		cesta.addArticulo(art);
+		cesta.addArticulo(art2);
+		cesta.addArticulo(art3);
+		assertNotNull(cesta.getArticulos());
+	}
+
+	@Test
+	void testTotalPrice() {
+		Articulo art = new Articulo("platanos",10);
+		Articulo art2 = new Articulo("zapatillas",300);
+		Articulo art3 = new Articulo("camisetas",30);
+		cesta.addArticulo(art);
+		cesta.addArticulo(art2);
+		cesta.addArticulo(art3);
+		assertEquals(340,cesta.totalPrice(),0);
+	}
+
+	@Test
+	void testCalculadorDescuento() {
+		assertEquals(10,cesta.calculadorDescuento(100, 10));
+	}
+
+}

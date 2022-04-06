@@ -1,0 +1,12 @@
+package com.nttdata.carritocompra.service;
+
+import com.nttdata.carritocompra.model.Articulo;
+
+public interface CarritoCompraService {
+
+	public void limpiarFecha();
+	
+	public void addArticulo(Articulo articulo);
+	
+	
+}

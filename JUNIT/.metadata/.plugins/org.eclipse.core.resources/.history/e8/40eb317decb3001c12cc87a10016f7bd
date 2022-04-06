@@ -1,0 +1,39 @@
+package com.nttdata.carritocompra.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CarritoCompraServiceImplTest {
+
+	@Test
+	void testLimpiarFecha() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testAddArticulo() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetNumArticulos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetArticulos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testTotalPrice() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculadorDescuento() {
+		fail("Not yet implemented");
+	}
+
+}
