@@ -1,0 +1,10 @@
+public class Calculator {
+	public void calculate(Object operation) throws Exception {
+		if(operation ==null) {
+			throws new Exception("Can not perfomn this operation");
+		}else if(operation instanceof Multiplication) {
+			Multiplication ml = (Multiplication) operation;
+			ml.result = ml.a * ml.b;
+		}
+	}
+}
