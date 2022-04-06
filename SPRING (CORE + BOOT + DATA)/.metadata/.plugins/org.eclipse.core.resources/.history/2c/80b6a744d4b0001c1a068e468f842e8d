@@ -1,0 +1,35 @@
+package com.nttdata.spring;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		List<Persona> personas = new ArrayList<Persona>();
+		personas.add(new Persona("Pedro","Diaz"));
+		personas.add(new Persona("Pablo","Pinilla"));
+		
+		Apartamentos aparts = new Apartamentos(personas);
+		
+		List<Apartamentos> listaAparts = new ArrayList<Apartamentos>();
+		
+		listaAparts.add(aparts);
+		listaAparts.add(aparts);
+		
+		Edificio edificio = new Edificio(listaAparts);
+		System.out.println(edificio.toString());
+		
+	}
+	
+}	

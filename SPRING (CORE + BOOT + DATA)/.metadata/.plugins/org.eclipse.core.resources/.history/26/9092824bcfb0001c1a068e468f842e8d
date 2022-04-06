@@ -1,0 +1,31 @@
+package com.nttdata.spring;
+
+public class Edificio {
+	
+	private int plantas;
+	
+	private Apartamentos[] apartamentos;
+	
+	
+	public Edificio(int plantas, Apartamentos[] apartamentos) {
+		super();
+		this.plantas = plantas;
+		this.apartamentos = apartamentos;
+	}
+
+	public Apartamentos[] getApartamentos() {
+		return apartamentos;
+	}
+
+	public void setApartamentos(Apartamentos[] apartamentos) {
+		this.apartamentos = apartamentos;
+	}
+
+	public int getPlantas() {
+		return plantas;
+	}
+
+	public void setPlantas(int plantas) {
+		this.plantas = plantas;
+	}
+}

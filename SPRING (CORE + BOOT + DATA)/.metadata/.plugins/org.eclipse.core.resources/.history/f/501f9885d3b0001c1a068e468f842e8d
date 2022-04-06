@@ -1,0 +1,32 @@
+package com.nttdata.spring;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Persona[] personas = new Persona[4];
+		personas[0]= new Persona("Pedro","Rodriguez");
+		personas[1]= new Persona("Alvaro","Diaz");
+		personas[2]=new Persona("Daniel","Sanchez");
+		personas[3]= new Persona("Pablo","Perez");
+		Apartamentos apartamentos = new Apartamentos(personas);
+		Apartamentos[] aparts = new Apartamentos[2];
+		aparts[0]=apartamentos;
+		aparts[1]=apartamentos;
+		Edificio edificio = new Edificio(aparts);
+		
+		
+		System.out.println(edificio);
+		
+	}
+	
+}	

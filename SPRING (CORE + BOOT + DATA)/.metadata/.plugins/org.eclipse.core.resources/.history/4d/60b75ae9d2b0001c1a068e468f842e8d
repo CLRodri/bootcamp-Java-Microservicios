@@ -1,0 +1,24 @@
+package com.nttdata.spring;
+
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class Apartamentos {
+	
+	private Persona[] personas;
+	
+	public Apartamentos(Persona[] personas) {
+		super();
+		this.personas = personas;
+	}
+
+	public Persona[] getPersonas() {
+		return personas;
+	}
+
+	public void setPersonas(Persona[] personas) {
+		this.personas = personas;
+	}
+	
+}

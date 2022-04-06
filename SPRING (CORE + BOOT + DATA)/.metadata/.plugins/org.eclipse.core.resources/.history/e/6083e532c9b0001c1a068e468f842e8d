@@ -1,0 +1,15 @@
+package com.nttdata.spring;
+
+public class Apartamentos {
+	
+	private Persona[] personas;
+
+	public Persona[] getPersonas() {
+		return personas;
+	}
+
+	public void setPersonas(Persona[] personas) {
+		this.personas = personas;
+	}
+	
+}

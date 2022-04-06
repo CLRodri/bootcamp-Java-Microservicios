@@ -1,0 +1,13 @@
+package com.nttdada.nttdatacentersspringt3RCL;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class NttdatacentersSpringT3RclApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(NttdatacentersSpringT3RclApplication.class, args);
+	}
+
+}
