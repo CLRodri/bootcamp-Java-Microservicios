@@ -1,0 +1,5 @@
+package nttdatacentershibernatet1RCL;
+
+public interface DAO {
+
+}

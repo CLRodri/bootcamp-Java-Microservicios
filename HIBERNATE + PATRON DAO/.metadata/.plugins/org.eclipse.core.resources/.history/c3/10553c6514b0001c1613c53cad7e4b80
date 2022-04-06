@@ -1,0 +1,25 @@
+package nttdatacentershibernatet1RCL;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+
+public class DAOImpl implements DAO{
+	
+	private Session session;
+	
+	public DAOImpl(Session session) {
+		this.session=session;
+	}
+	@Override
+	public List<ClientDAO> searchClient() {
+		List<ClientDAO> res = new ArrayList<ClientDAO>();
+		if(!session.getTransaction().isActive()) {
+			session.getTransaction().begin();
+		}
+		res = session.createQuery("FROM" + ClientDAO.class).list();
+		
+		return res;
+	}
+}

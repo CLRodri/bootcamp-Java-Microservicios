@@ -1,0 +1,65 @@
+package nttdatacentershibernatet1RCL;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+
+public class ContractoDAO {
+	
+	private int id;
+	
+	private Date date_Vigencia;
+	
+	private Date date_Caducidad;
+	
+	private int precio;
+	
+	private String relacion;
+	@Column(name="id")
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	@Column(name="Fecha_Vigencia")
+	public Date getDate_Vigencia() {
+		return date_Vigencia;
+	}
+
+	public void setDate_Vigencia(Date date_Vigencia) {
+		this.date_Vigencia = date_Vigencia;
+	}
+
+	@Column(name="Fecha_Caducidad")
+	public Date getDate_Caducidad() {
+		return date_Caducidad;
+	}
+
+	public void setDate_Caducidad(Date date_Caducidad) {
+		this.date_Caducidad = date_Caducidad;
+	}
+
+	@Column(name="Precio")
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	
+	@Column(name="Relacion")
+	public String getRelacion() {
+		return relacion;
+	}
+
+	public void setRelacion(String relacion) {
+		this.relacion = relacion;
+	}
+	
+	
+	
+}

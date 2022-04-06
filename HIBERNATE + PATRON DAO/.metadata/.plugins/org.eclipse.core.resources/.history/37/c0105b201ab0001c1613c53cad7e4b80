@@ -1,0 +1,26 @@
+package nttdatacentershibernatet1RCL;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+
+public class ContratoDAOImpl implements ContratoDAOInter{
+private Session session;
+	
+	public ContratoDAOImpl(Session session) {
+		this.session=session;
+	}
+	
+	public void deleteContract(9
+	@Override
+	public List<ContratoDAO> searchContract() {
+		List<ContratoDAO> res = new ArrayList<ContratoDAO>();
+		if(!session.getTransaction().isActive()) {
+			session.getTransaction().begin();
+		}
+		res = session.createQuery("FROM" + ContratoDAO.class).list();
+		
+		return res;
+	}
+}

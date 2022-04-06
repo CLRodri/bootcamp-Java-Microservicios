@@ -1,0 +1,17 @@
+package nttdatacentershibernatet1RCL;
+
+import java.util.List;
+
+public interface DAO {
+	
+	void delete(ClientDAO client);
+	
+	void insert(ClientDAO client);
+	
+	List<ClientDAO> findAll();
+	
+	ClientDAO findbyId(int id);
+	
+	void update(ClientDAO client);
+	
+}
