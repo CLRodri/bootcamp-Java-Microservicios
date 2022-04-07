@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/CLRodri/bootcamp-Java-Microservicios
+          uri: https://github.com/CLRodri/bootcamp-Java-Microservicios.git
           search-paths: /SPRING-CLOUD/config-data
           
          
